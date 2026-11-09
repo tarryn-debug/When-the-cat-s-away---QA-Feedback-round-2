@@ -997,7 +997,11 @@
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
       }
-      .m-nav-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .m-nav-arrow {
+        width: 14px;
+        height: auto;
+        display: block;
+      }
       .m-nav-btn:active:not(:disabled) { background: var(--color-bg-light); border-color: var(--color-teal); }
       .m-nav-btn:disabled { opacity: 0.35; cursor: default; }
       .m-dots { display: flex; align-items: center; }
@@ -1343,11 +1347,11 @@
       </div>
       <div class="m-controls" id="m-controls">
         <button class="m-nav-btn" id="m-prev" type="button" aria-label="Previous">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 5 8 12 15 19"/></svg>
+          <img src="Resources/PastedVector-26.svg" alt="" class="m-nav-arrow">
         </button>
         <div class="m-dots" id="m-dots"></div>
         <button class="m-nav-btn" id="m-next" type="button" aria-label="Next">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 5 16 12 9 19"/></svg>
+          <img src="Resources/PastedVector-40.svg" alt="" class="m-nav-arrow">
         </button>
       </div>
     </main>

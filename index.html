@@ -242,6 +242,35 @@
       --glyph: #1f2e7a;
     }
 
+    /* Home asset-based state handling inside the SVG circle */
+    .home-svg-img {
+      pointer-events: none;
+    }
+
+    .home-svg-hover,
+    .home-svg-active {
+      display: none;
+    }
+
+    .icon-btn:hover .home-svg-normal,
+    .icon-btn:focus-visible .home-svg-normal {
+      display: none;
+    }
+
+    .icon-btn:hover .home-svg-hover,
+    .icon-btn:focus-visible .home-svg-hover {
+      display: inline;
+    }
+
+    .icon-btn:active .home-svg-normal,
+    .icon-btn:active .home-svg-hover {
+      display: none;
+    }
+
+    .icon-btn:active .home-svg-active {
+      display: inline;
+    }
+
     /* Bibliography asset-based state handling inside the SVG circle */
     .bib-svg-img {
       pointer-events: none;
@@ -1072,7 +1101,12 @@
         <button class="icon-btn" id="btn-reset" aria-label="Reset Infographic">
           <svg viewBox="0 0 36 36">
             <circle class="ring" cx="18" cy="18" r="16.5"/>
-            <path class="glyph" d="M18 10.5l-7 6.2v8.8h4.5v-5.5h5v5.5H25v-8.8l-7-6.2z"/>
+            <!-- Normal state = PastedVector-11.svg -->
+            <image class="home-svg-img home-svg-normal" href="Resources/PastedVector-11.svg" x="10" y="10" width="16" height="16"/>
+            <!-- Hover state = Home over.svg -->
+            <image class="home-svg-img home-svg-hover" href="Resources/Home over.svg" x="0" y="0" width="36" height="36"/>
+            <!-- Clicked state = Home pressed.svg -->
+            <image class="home-svg-img home-svg-active" href="Resources/Home pressed.svg" x="0" y="0" width="36" height="36"/>
           </svg>
         </button>
 
@@ -1273,7 +1307,12 @@
         <button class="icon-btn" id="m-btn-home" type="button" aria-label="Reset Infographic">
           <svg viewBox="0 0 36 36">
             <circle class="ring" cx="18" cy="18" r="16.5"/>
-            <path class="glyph" d="M18 10.5l-7 6.2v8.8h4.5v-5.5h5v5.5H25v-8.8l-7-6.2z"/>
+            <!-- Normal state = PastedVector-11.svg -->
+            <image class="home-svg-img home-svg-normal" href="Resources/PastedVector-11.svg" x="10" y="10" width="16" height="16"/>
+            <!-- Hover state = Home over.svg -->
+            <image class="home-svg-img home-svg-hover" href="Resources/Home over.svg" x="0" y="0" width="36" height="36"/>
+            <!-- Clicked state = Home pressed.svg -->
+            <image class="home-svg-img home-svg-active" href="Resources/Home pressed.svg" x="0" y="0" width="36" height="36"/>
           </svg>
         </button>
         <button class="icon-btn" id="m-btn-biblio" type="button" aria-label="Open Bibliography" aria-pressed="false">

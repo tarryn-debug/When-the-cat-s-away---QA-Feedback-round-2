@@ -791,7 +791,8 @@
     }
 
     /* ========================================================= */
-    /* SCALING LAYER: every size below follows the container width */
+    /* SCALING LAYER: sizes follow container width               */
+    /* Buttons are kept fixed at 36px/40px to match index_2.html */
     /* ========================================================= */
     @property --u {
       syntax: '<length>';
@@ -803,7 +804,7 @@
     .app-header { padding: calc(12.8 * var(--u)) calc(28 * var(--u)); }
     .sub-title { font-size: calc(17.5 * var(--u)); }
     .header-buttons { gap: calc(8 * var(--u)); }
-    .icon-btn { width: calc(36 * var(--u)); height: calc(36 * var(--u)); }
+    .icon-btn { width: 36px; height: 36px; }
 
     .view-cover { padding: calc(64 * var(--u)) calc(96 * var(--u)); }
     .cover-content { gap: calc(32 * var(--u)); }
@@ -823,7 +824,7 @@
     .dialog-card p { font-size: calc(14.08 * var(--u) * var(--fs, 1)); line-height: 1.65; color: #1a1a1a; }
     .dialog-card p.is-scrollable { overflow-y: auto; padding-right: calc(10 * var(--u)); }
     .dialog-card p.is-scrollable:focus-visible { outline: 3px solid var(--color-primary-blue); outline-offset: 2px; }
-    .close-card-btn { top: calc(20 * var(--u)); right: calc(20 * var(--u)); width: calc(36 * var(--u)); height: calc(36 * var(--u)); }
+    .close-card-btn { top: calc(20 * var(--u)); right: calc(20 * var(--u)); width: 36px; height: 36px; }
 
     .spotlight-view-container.layout-left .dialog-card { width: 43%; }
     .spotlight-view-container.layout-left.turkey-layout .dialog-card { width: 43%; }
@@ -935,7 +936,7 @@
       .m-header { display: none; padding: 16px 20px 0; }
       .mobile-app:not([data-view="cover"]) .m-header { display: block; }
       .m-header-buttons { display: flex; justify-content: space-between; align-items: center; }
-      .mobile-app .icon-btn { width: 40px; height: 40px; }
+      .mobile-app .icon-btn { width: 40px; height: 40px; min-width: 40px; min-height: 40px; }
       .m-subtitle { margin-top: 12px; font-size: 14px; font-weight: 500; color: #333; }
       .m-rule { border: 0; border-top: 1px solid #e0e0e0; margin: 10px 0 0; }
 
